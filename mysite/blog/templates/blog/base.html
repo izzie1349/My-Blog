@@ -28,7 +28,7 @@
     <nav class="navbar navbar-default techfont custom-navbar">
       <div class="container">
         <ul>
-          <li><a class="navbar-brand bigbrand" href="{% url post_list %}">My Blog</a></li>
+          <li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">My Blog</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="https://www.linkedin.com">Linkedin</a></li>
         </ul>
@@ -44,7 +44,7 @@
           </li>
             {% else %}
             <li><a class="nav navbar-right" href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a></li>
-          {% elseif %}
+          {% endif %}
         </ul>
       </div>
     </nav>
@@ -55,7 +55,7 @@
       <div class="row">
         <div class="col-md-8">
           <div class="blog_posts">
-            {% block content}
+            {% block content %}
             {% endblock %}
           </div>
 
